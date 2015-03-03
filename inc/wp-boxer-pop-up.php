@@ -11,9 +11,10 @@ class WPBoxerPopUp
      */
     private $postType = "boxer-pop-up";
     
-    function __construct(argument)
+    function __construct()
     {
         add_action( 'init', array( $this, 'wp_boxer_pop_up_type' ) );
+        add_action( 'add_meta_boxes', array( $this, 'wp_boxer_pop_up_metabox' ) );
     }
 
     /**
@@ -48,11 +49,36 @@ class WPBoxerPopUp
             'menu_position' => null,
             'capability_type' => 'post',
             'supports' => array('title', 'editor'),
-            'menu_icon'=> plugins_url('img/icon.png',__FILE__),
+            //'menu_icon'=> plugins_url('img/icon.png',__FILE__),
         );
         
         register_post_type($this->postType, $args);
     }
-}
 
+    /**
+     * Metodo que permite registrar el meta box de configuración del post type
+     * @return void
+     */
+    final public function wp_boxer_pop_up_metabox()
+    {
+        add_meta_box(
+            'wpbpp_meta',
+            __('Configuración Boxer Pop-up',BOXERPOPPUP_PLUGIN_SLUG),
+            array($this,'wp_boxer_pop_up_metabox_view'),
+            $this->postType,
+            'side'
+        );
+    }
+
+    /**
+     * Metodo que permite imprimir la vista del meta box
+     * @param  [type] $post [description]
+     * @return [type]       [description]
+     */
+    final public function wp_boxer_pop_up_metabox_view($post)
+    {
+        echo 'probando';
+    }
+}
+$WPBPP = new WPBoxerPopUp();
 ?>

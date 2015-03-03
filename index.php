@@ -14,4 +14,6 @@ define( 'BOXERPOPPUP_ROOT_URL', plugins_url( '', __FILE__ ) );
 define( 'BOXERPOPPUP_PLUGIN_VERSION', '1.0');
 define( 'BOXERPOPPUP_PLUGIN_SLUG', basename( dirname( __FILE__ ) ) );
 define( 'BOXERPOPPUP_PLUGIN_BASE', plugin_basename( __FILE__ ) );
+
+include_once BOXERPOPPUP_ROOT_PATH.'/inc/wp-boxer-pop-up.php';
 ?>
