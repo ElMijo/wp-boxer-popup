@@ -16,6 +16,7 @@ define( 'BOXERPOPPUP_PLUGIN_SLUG', basename( dirname( __FILE__ ) ) );
 define( 'BOXERPOPPUP_PLUGIN_BASE', plugin_basename( __FILE__ ) );
 
 include_once BOXERPOPPUP_ROOT_PATH.'/inc/wp-simple-exitpopup.php';
-include_once BOXERPOPPUP_ROOT_PATH.'/inc/wp-ximple-exitpopup-colums.php';
+include_once BOXERPOPPUP_ROOT_PATH.'/inc/wp-simple-exitpopup-colums.php';
+include_once BOXERPOPPUP_ROOT_PATH.'/inc/wp-simple-exitpopup-frontend.php';
 
 ?>
