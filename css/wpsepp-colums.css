@@ -1,0 +1,16 @@
+.fixed .column-only_home, 
+.fixed .column-active
+{
+    width: 10%;
+}
+.fixed .column-active span.active
+{
+    color: green;
+}
+
+@media screen and (max-width: 782px){
+    .fixed .column-only_home, .fixed .column-active
+    {
+        display: none;
+    }
+}

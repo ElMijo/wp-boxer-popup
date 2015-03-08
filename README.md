@@ -1,2 +1,2 @@
-# wp-boxer-popup
-un plugin para wordpress que permite mostrar una ventaana popup, basado en la libreria jquery.boxer
+# Wordpress Simple ExitPopUP
+un plugin para wordpress que permite crear un ExitPopUp de maanera raapida y simple
